@@ -523,6 +523,25 @@ var places = [
 	{
 		"city": "Manchester",
 		"country": "UK",
+		"name": "North Tea Power",
+		"address": "36 Tib St, Manchester, M4 1LA",
+		"coordinates": ["53.48296","-2.23583"],
+		"description": {
+			"Internet": "Free wifi (with captive portal, no registration)",
+			"Power Outlets": "None that I could see",
+			"Seating": "Small tables two large benches",
+			"Service": "Very friendly",
+			"Provision": "Coffee, tea, cake",
+			"Hours": "Mon-Fri 8.00-19.00, Sat 10.00-19.00, Sun 11.00-18.00"
+		},
+		"link": {
+			"homepage":"http://northteapower.co.uk/"
+			"twitter":"https://twitter.com/northteapower"
+		}
+	},
+	{
+		"city": "Manchester",
+		"country": "UK",
 		"name": "Takk",
 		"address": "6 Tariff Street, M1 2FF",
 		"coordinates": ["53.481202", "-2.232628"],
