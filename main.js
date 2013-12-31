@@ -61,7 +61,14 @@ App.controller('Controller', function ($scope, $location, $anchorScroll) {
 
 	});
 
-	$scope.search = function () {
+	$scope.geolocatable = !!window.navigator.geolocation;
+
+	$scope.geolocate = function () {
+		$scope.disabled = true;
+		window.navigator.geolocation.getCurrentPosition($scope.search);
+	};
+
+	$scope.search = function (location) {
 
 		$location.hash('search');
 		$anchorScroll();
@@ -70,7 +77,15 @@ App.controller('Controller', function ($scope, $location, $anchorScroll) {
 
 		$scope.disabled = true;
 
-		geocoder.geocode({'address': $scope.location}, function(results, status) {
+		var searchObject = {'address': $scope.location};
+
+		if(location) {
+			var lx = new google.maps.LatLng(location.coords.latitude,
+																			location.coords.longitude);
+			searchObject = {'location': lx};
+		}
+
+		geocoder.geocode(searchObject, function(results, status) {
 			if (results.length > 0) {
 
 				map.panTo(results[0].geometry.location);

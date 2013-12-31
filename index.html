@@ -52,6 +52,11 @@
 									<i ng-show="disabled" class="fa fa-spinner fa-spin"></i>
 									<span ng-hide="disabled">Search</span>
 								</button>
+								<button ng-disabled="disabled" type="submit" ng-click="geolocate()" ng-show="geolocatable"
+										class="input-lg btn">
+									<i ng-show="disabled" class="fa fa-spinner fa-spin"></i>
+									<span ng-hide="disabled">Use My Location</span>
+								</button>
 							</span>
 						</div>
 					</form>
