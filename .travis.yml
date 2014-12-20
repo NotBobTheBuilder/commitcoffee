@@ -1,6 +1,6 @@
-language: python
+language: node_js
 script:
-  - python validateplaces.py
+  - npm run build
 branches:
   only:
     - gh-pages
